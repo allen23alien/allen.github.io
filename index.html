@@ -2,8 +2,13 @@
 <html lang="en">
 
 <head>
-    <title>Welcome to my Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="icon" href="social.png" type="image/x-icon">
+    
+    <!-- Viewport meta tag for mobile responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <style>
         /* Importing Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
@@ -16,30 +21,64 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.7;
+            background-color: #a1a1a1;
+            color: #ffffff;
+            margin: 10;
+            padding: 50px;
+            line-height: 1.8;
+        }
+
+        /* Shaking animation */
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 1px) rotate(-1deg); }
+            80% { transform: translate(-1px, -1px) rotate(1deg); }
+            90% { transform: translate(1px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+
+        /* Introduction Section with Flexbox */
+        .intro-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            background-color: #1b1d1e;
+            margin-bottom: 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+            transition: all 0.2s ease;
+        }
+
+        /* Apply shake effect on hover */
+        .intro-section:hover {
+            animation: shake 0.5s;
+            animation-iteration-count: 1;
         }
 
         h1 {
-            color: #343a40;
+            color: #ffffff;
             text-align: center;
             margin-bottom: 20px;
-            font-size: 2.5em;
+            font-size: 2.8em;
             font-weight: 600;
         }
 
         h2 {
-            color: #007bff;
-            font-size: 2em;
+            color: #4A90E2;
+            font-size: 2.2em;
             font-weight: 500;
         }
 
         h3 {
-            color: #343a40;
-            font-size: 1.8em;
+            color: #ffffff;
+            font-size: 2em;
             font-weight: 600;
             text-align: center;
             margin-top: 40px;
@@ -47,121 +86,164 @@
 
         p {
             margin: 10px 0;
-            font-size: 1.1em;
+            font-size: 1.15em;
             font-weight: 300;
-            text-align: center;
+            color: #ffffff;
         }
 
+        /* Navigation Section */
         nav {
-            text-align: center;
-            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
         }
 
         nav ol {
             list-style-type: none;
             padding: 0;
+            display: flex;
+            gap: 60px;
+            flex-wrap: wrap;
         }
 
         nav ol li {
-            display: inline-block;
-            margin: 0 15px;
+            margin: 0;
         }
 
         nav ol li a {
             text-decoration: none;
-            color: #007bff;
+            color: #1bfff4;
             font-weight: 500;
-            padding: 7px 15px;
-            font-size: 1.1em;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            font-size: 1.2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 165px;
+            height: 165px;
+            border-radius: 50%;
+            background-color: #1b1d1e;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+            transition: all 0.8s ease;
         }
 
         nav ol li a:hover {
-            background-color: #007bff;
+            background-color: #00000050;
             color: white;
         }
 
-        /* Introduction Section */
-        .intro-section {
-            text-align: center;
-            padding: 30px;
-            background-color: #ffffff;
-            margin-bottom: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        /* Social icons container */
+        .social-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
         }
 
-        /* Cards Section */
-        .card {
-            background-color: white;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+        .social-nav ol {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            gap: 40px;
         }
 
-        .card:hover {
-            transform: scale(1.02);
+        .social-nav ol li {
+            margin: 0;
         }
 
-        .card-title {
-            font-size: 1.6em;
-            font-weight: 500;
-            color: #17a2b8;
+        .social-nav ol li a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #1b1d1e;
+            text-decoration: none;
+            color: #1bfff4;
+            font-size: 1.5em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+            transition: all 0.5s ease;
+        }
+
+        .social-nav ol li a:hover {
+            background-color: #00000050;
+            color: white;
+        }
+
+        /* Image styling */
+        .intro-section img {
+            border-radius: 50%;
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            margin-right: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 1.9);
+        }
+
+        /* Information Section */
+        .intro-section .info {
+            max-width: 600px;
+        }
+
+        .intro-section .info h2 {
+            font-size: 2.5em;
+            color: #333;
             margin-bottom: 10px;
         }
 
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            margin-top: 10px;
+        .intro-section .info p {
+            font-size: 1.2em;
+            font-weight: 300;
+            color: #555;
         }
 
-        ul li {
-            margin-bottom: 10px;
-            font-size: 1.05em;
-        }
-
-        strong {
-            color: #343a40;
-            font-weight: 500;
-        }
-
+        /* Maintain desktop view on smaller screens */
         @media (max-width: 768px) {
-            body {
-                padding: 10px;
+            .intro-section {
+                flex-direction: row; /* Keep row layout even on mobile */
             }
 
-            h1 {
-                font-size: 2em;
+            .intro-section img {
+                width: 180px; /* Adjust the size to fit smaller screens */
+                height: 120px;
             }
 
-            h2 {
-                font-size: 1.5em;
+            .intro-section .info h2 {
+                font-size: 1.8em;
             }
 
-            nav ol li {
-                display: block;
-                margin: 10px 0;
+            nav ol {
+                flex-direction: row; /* Maintain row layout */
+                gap: 16px; /* Reduce gap between items */
+                justify-content: center;
+                align-items: center;
             }
 
-            .card {
-                padding: 15px;
+            .social-nav ol {
+                flex-direction: row; /* Maintain row layout */
+                gap: 20px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .social-nav ol li a {
+                width: 60px; /* Slightly reduce icon size */
+                height: 60px;
             }
         }
     </style>
 </head>
 
 <body>
-    <h1>Welcome to my Portfolio</h1>
-
     <!-- Introduction Section -->
     <section class="intro-section">
-        <h2>Hello, I'm Allen Sam Anand</h2>
-        <p>Welcome to my personal blog where I share my thoughts and experiences.</p>
+        <img src="photo_2024-03-05_02-19-29.jpg" alt="Your Photo">
+        <div class="info">
+            <h2 style="color: #1bfff4;">
+                <span id="random-hello" class="random-text">Hello</span>, I'm Allen Sam Anand
+            </h2>
+            <p style="color: #ffffff;">Welcome to my personal blog where I share my thoughts and experiences. I'm passionate about software development, Linux kernel vulnerabilities, and engineering project management.</p>
+        </div>
     </section>
 
     <!-- Navigation -->
@@ -169,62 +251,48 @@
         <ol>
             <li><a href="about.html">About me</a></li>
             <li><a href="projects.html">My Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="education.html">Education</a></li>
         </ol>
     </nav>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <h3>My Experience</h3>
+    <!-- Social Media Icons -->
+    <div class="social-nav">
+        <ol>
+            <li><a href="mailto:2003allensamanand@gmail.com">
+                <img src="new.png" alt="Email" width="40" height="40">
+            </a></li>
+            <li><a href="https://www.linkedin.com/in/allen-sam-anand-bb1531249" target="_blank">
+                <img src="linkedin.png" alt="LinkedIn" width="40" height="40">
+            </a></li>
+            <li><a href="https://github.com/allen23alien" target="_blank">
+                <img src="github (2).png" alt="GitHub" width="40" height="40">
+            </a></li>
+        </ol>
+    </div>
+    
+    <script>
+        // Array of random colors and fonts
+        const colors = ['#1bfff4', '#ff6347', '#32cd32', '#ff69b4', '#8a2be2', '#ffa500', '#00ced1'];
+        const fonts = ['Poppins', 'Roboto', 'Raleway', 'Lobster', 'Arial', 'Verdana', 'Georgia'];
 
-        <div class="card">
-            <div class="card-title">Engineer Intern</div>
-            <p><strong>Company Name:</strong> SupplySafe (RNAlter)</p>
-            <p><strong>Duration:</strong> Sep 2024 - Present</p>
-            <p>Involved in building new vulnerabilities for Linux kernel modules.</p>
-        </div>
+        // Function to change the style randomly
+        function changeStyle() {
+            const randomHello = document.getElementById('random-hello');
+            
+            // Get a random color and font
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
 
-        <div class="card">
-            <div class="card-title">Software Developer Intern</div>
-            <p><strong>Company Name:</strong> TechCiti</p>
-            <p><strong>Duration:</strong> Oct 2023 - Nov 2023</p>
-            As a Software Developer Intern, I played a key role in developing the <strong>Heart Disease Prediction</strong> project. My responsibilities included:
-            <ul>
-                <li>Collaborating with experienced software developers to understand algorithms and ensure accurate integration.</li>
-                <li>Writing clean, efficient code in Python, utilizing libraries like Pandas, NumPy, and Scikit-learn.</li>
-                <li>Testing and debugging the application for optimal performance and reliability.</li>
-                <li>Contributing to user interface design to enhance user experience.</li>
-            </ul>
-            <p>This project achieved a prediction accuracy of 97.9%, enabling healthcare professionals to make informed decisions based on user inputs.</p>
-        </div>
+            // Apply the random style
+            randomHello.style.color = randomColor;
+            randomHello.style.fontFamily = randomFont;
+        }
 
-        <div class="card">
-            <div class="card-title">Engineer Intern</div>
-            <p><strong>Company Name:</strong> ComedKares</p>
-            <p><strong>Duration:</strong> Oct 2022 - Nov 2022</p>
-            <p>Involved in building a rapid prototype for trash compactor.</p>
-        </div>
-    </section>
+        // Change the style every 1 second (1000 ms)
+        setInterval(changeStyle, 1000);
+    </script>
 
-    <!-- Education Section -->
-    <section id="education">
-        <h3>My Education</h3>
-
-        <div class="card">
-            <div class="card-title">Bachelor of Engineering</div>
-            <p><strong>Institution:</strong> T John Institute of Technology</p>
-            <p><strong>Duration:</strong> 2021 - Present</p>
-<!--             <p><strong>CGPA:</strong> </p> -->
-        </div>
-
-<!--         <div class="card">
-            <div class="card-title">Pre-University</div>
-            <p><strong>Institution:</strong> </p>
-            <p><strong>Duration:</strong> 2019 - 2021</p>
-            <p><strong>Percentage:</strong> </p>
-        </div> -->
-    </section>
 </body>
 
 </html>
