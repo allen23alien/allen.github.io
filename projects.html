@@ -1,89 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>My Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Import Google Fonts and Custom Styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+    <link rel="icon" href="social.png" type="image/x-icon">
+    
     <style>
-        body {
-            font-family: 'Georgia', serif; /* Elegant font style */
-            background-color: #ffffff; /* Clean white background */
-            color: #333; /* Dark text color */
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1b1d1e;
+            color: #ffffff;
+            margin: 10;
+            padding: 50px;
+            line-height: 1.8;
         }
 
         h1 {
-            text-align: center; /* Center the title */
-            color: #2c3e50; /* Dark navy color for the title */
-            margin-bottom: 40px; /* Space below the title */
-            font-size: 2.5em; /* Larger title size */
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+            color: #1bfff4;
+            font-size: 2.8em;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 40px;
         }
 
         .project {
-            border: 1px solid #e0e0e0; /* Light gray border */
-            border-radius: 8px; /* Slightly rounded corners */
-            padding: 20px; /* Padding for content */
-            margin: 20px 0; /* Space between projects */
-            background-color: #f9f9f9; /* Very light gray for project background */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-            transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+            background-color: #2c2f31;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .project:hover {
-            transform: translateY(-2px); /* Lift effect on hover */
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
         }
 
         .project h2 {
-            color: #2980b9; /* Classic blue for project titles */
-            font-size: 1.8em; /* Slightly larger project title */
-            margin-bottom: 10px; /* Space below project titles */
+            color: #4A90E2;
+            font-size: 2em;
+            margin-bottom: 15px;
         }
 
         .project p {
-            font-size: 1.1em; /* Standard paragraph size */
-            line-height: 1.6; /* Improved readability */
-            margin-bottom: 15px; /* Space below paragraphs */
+            font-size: 1.2em;
+            color: #d3d3d3;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
 
         .project a {
-            text-decoration: none; /* No underline for links */
-            color: #e74c3c; /* Red color for links */
-            font-weight: bold; /* Bold links */
-            padding: 10px 15px; /* Padding for links */
-            border-radius: 5px; /* Rounded corners for links */
-            background-color: #ffffff; /* White background for links */
-            border: 2px solid #e74c3c; /* Red border for links */
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+            text-decoration: none;
+            color: #1bfff4;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 2px solid #1bfff4;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .project a:hover {
-            background-color: #e74c3c; /* Red background on hover */
-            color: #ffffff; /* White text on hover */
+            background-color: #1bfff4;
+            color: #1b1d1e;
         }
+
     </style>
 </head>
+
 <body>
     <h1>My Projects</h1>
-    
+
     <div class="project">
         <h2>Calculation-of-Object-Dimensions</h2>
         <p>The "Calculation of Object Dimensions" mini project involves creating a system or algorithm to measure and calculate the dimensions (such as length, width, and height) of physical objects using techniques like image processing, computer vision, or sensor-based data.</p>
         <a href="https://github.com/EduCollaborations/Calculation-of-Object-Dimensions/tree/Allen_1TJ21CS005">View Project</a>
     </div>
-    
-<!--     <div class="project">
+
+    <!-- Uncomment for additional project -->
+    <!-- <div class="project">
         <h2>Heart Disease Prediction</h2>
         <p>I played a role of software developer and data analyst, which helped me to analyze the problem statement and implement a project that predicts the heart disease of an individual based on user input. Used Logistic regression model, Pandas, NumPy, Scikit-Learn and the prediction accuracy is 97.9.</p>
         <a href="https://github.com/ArchanaBS-1233/Heart_Disease_Predictor">View Project</a>
     </div> -->
-    
+
     <div class="project">
         <h2>Tetris</h2>
         <p>Tetris is a classic puzzle video game where players strategically rotate and arrange falling blocks (tetrominoes) to create complete horizontal lines, which then disappear, earning points and clearing space for more blocks.</p>
         <a href="https://github.com/allen23alien/Tetris">View Project</a>
-    </div> 
-    
+    </div>
+
     <div class="project">
         <h2>StickMan-fencing-game</h2>
         <p>Stickman Fencing is a fast-paced, minimalist fencing game where players control stick figure characters, engaging in quick duels using simple movements and timing to outmaneuver and strike their opponent with a sword.</p>
@@ -91,4 +108,5 @@
     </div>
 
 </body>
+
 </html>
